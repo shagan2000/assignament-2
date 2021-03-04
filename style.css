@@ -1,0 +1,164 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.navbar {
+	font-size: 18px;
+	background-color: black;
+
+	padding-bottom: 10px;
+}
+
+.nav-menu {
+	list-style-type: none;
+	display: none;
+}
+
+.nav-link,
+.logo {
+	text-decoration: none;
+	color: white;
+}
+
+.nav-menu li {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.logo {
+	display: inline-block;
+	font-size: 22px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.navbar-toggle {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 24px;
+}
+
+#chktoggle {
+	display: none;
+}
+
+#chktoggle:checked + ul.nav-menu {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: 70px;
+		align-items: center;
+	}
+
+	#chktoggle:checked + ul.nav-menu {
+		display: flex;
+	}
+
+	.nav-menu {
+		display: flex;
+		margin-right: 30px;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.nav-menu li {
+		margin: 0;
+	}
+
+	.nav-link {
+		margin-left: 40px;
+	}
+
+	.logo {
+		margin-top: 0;
+	}
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.logo:hover,
+	.nav-link:hover {
+		color: rgba(255, 255, 255, 1);
+	}
+}
+
+.cover-wallpaper img {
+	height: 65vh;
+	width: 100%;
+	background-size: cover;
+    background-position: center;
+}
+
+.section-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.section-card img {
+    width: 300px;
+    height: 300px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #004e92;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+footer {
+	margin-top: 40px;
+	background-color: black;
+	height: 100px;
+	color: white;
+}
+
+footer p {
+	padding: 30px;
+	text-align: center;
+}
